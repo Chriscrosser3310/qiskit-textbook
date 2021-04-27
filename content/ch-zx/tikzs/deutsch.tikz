@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=hadamard] (0) at (-2.5, 1) {};
+		\node [style=X dot] (1) at (-3.5, 1) {};
+		\node [style=hadamard] (3) at (-2.5, -1) {};
+		\node [style=X phase dot] (4) at (-3.5, -1) {$\pi$};
+		\node [style=Z dot] (5) at (-1.5, 1) {};
+		\node [style=box] (6) at (-0.5, 0) {f};
+		\node [style=X dot] (7) at (0.5, -1) {};
+		\node [style=X dot] (8) at (2.5, 1) {};
+		\node [style=none] (10) at (2.5, -0.5) {};
+		\node [style=none] (11) at (2.5, -1.5) {};
+		\node [style=none] (12) at (2.75, -0.75) {};
+		\node [style=none] (13) at (2.75, -1.25) {};
+		\node [style=none] (14) at (2.5, -1) {};
+		\node [style=hadamard] (36) at (1.5, 1) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=simple] (1) to (0);
+		\draw [style=simple] (4) to (3);
+		\draw [style=simple] (5) to (0);
+		\draw [style=simple, bend right=45] (5) to (6);
+		\draw [style=simple] (7) to (3);
+		\draw [style=simple, bend right=45] (7) to (6);
+		\draw [style=simple] (12.center) to (13.center);
+		\draw [style=simple] (14.center) to (7);
+		\draw [style=simple] (14.center) to (10.center);
+		\draw [style=simple] (14.center) to (11.center);
+		\draw [style=simple] (8) to (36);
+		\draw [style=simple] (36) to (5);
+	\end{pgfonlayer}
+\end{tikzpicture}

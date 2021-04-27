@@ -1,0 +1,57 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=hadamard] (0) at (-2.5, 1) {};
+		\node [style=X dot] (1) at (-3.5, 1) {};
+		\node [style=hadamard] (3) at (-2.5, -1) {};
+		\node [style=X phase dot] (4) at (-3.5, -1) {$\pi$};
+		\node [style=Z dot] (5) at (-1.5, 1) {};
+		\node [style=box] (6) at (-0.5, 0) {f};
+		\node [style=X dot] (7) at (0.5, -1) {};
+		\node [style=X dot] (8) at (2.5, 1) {};
+		\node [style=none] (10) at (2.5, -0.5) {};
+		\node [style=none] (11) at (2.5, -1.5) {};
+		\node [style=none] (12) at (2.75, -0.75) {};
+		\node [style=none] (13) at (2.75, -1.25) {};
+		\node [style=none] (14) at (2.5, -1) {};
+		\node [style=hadamard] (36) at (1.5, 1) {};
+		\node [style=Z dot] (38) at (4.75, 1) {};
+		\node [style=Z phase dot] (40) at (8.25, 0) {$\pi$};
+		\node [style=Z dot] (41) at (6, 1) {};
+		\node [style=box] (42) at (7, 0) {f};
+		\node [style=Z dot] (44) at (9.25, 1) {};
+		\node [style=none] (45) at (9.25, -0.5) {};
+		\node [style=none] (46) at (9.25, -1.5) {};
+		\node [style=none] (47) at (9.5, -0.75) {};
+		\node [style=none] (48) at (9.5, -1.25) {};
+		\node [style=none] (49) at (9.25, -1) {};
+		\node [style=Z phase dot] (50) at (8.25, -1) {$\pi$};
+		\node [style=Z phase dot] (52) at (15, 0) {$\pi$};
+		\node [style=Z dot] (53) at (12, 0) {};
+		\node [style=box] (54) at (13.5, 0) {f};
+		\node [style=none] (55) at (3.75, 0) {=};
+		\node [style=none] (56) at (10.75, 0) {=};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=simple] (1) to (0);
+		\draw [style=simple] (4) to (3);
+		\draw [style=simple] (5) to (0);
+		\draw [style=simple, bend right=45] (5) to (6);
+		\draw [style=simple] (7) to (3);
+		\draw [style=simple, bend right=45] (7) to (6);
+		\draw [style=simple] (12.center) to (13.center);
+		\draw [style=simple] (14.center) to (7);
+		\draw [style=simple] (14.center) to (10.center);
+		\draw [style=simple] (14.center) to (11.center);
+		\draw [style=simple] (8) to (36);
+		\draw [style=simple] (36) to (5);
+		\draw [style=simple, bend right=45] (41) to (42);
+		\draw [style=simple] (47.center) to (48.center);
+		\draw [style=simple] (49.center) to (45.center);
+		\draw [style=simple] (49.center) to (46.center);
+		\draw [style=simple] (44) to (41);
+		\draw [style=simple] (38) to (41);
+		\draw [style=simple] (40) to (42);
+		\draw [style=simple] (50) to (49.center);
+		\draw [style=simple] (52) to (53);
+	\end{pgfonlayer}
+\end{tikzpicture}
